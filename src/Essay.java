@@ -34,4 +34,11 @@ public class Essay extends Writing {
         this.length = length;
         this.topic = topic;
     }
+
+    public void reset(Essay essay) {
+        this.title = essay.title;
+        this.attributes = essay.attributes;
+        this.length = essay.length;
+        this.topic = essay.topic;
+    }
 }

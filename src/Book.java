@@ -32,4 +32,11 @@ public class Book extends Writing {
         this.length = length;
         this.plot = plot;
     }
+
+    public void reset(Book book) {
+        this.title = book.title;
+        this.attributes = book.attributes;
+        this.length = book.length;
+        this.plot = book.plot;
+    }
 }

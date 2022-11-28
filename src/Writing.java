@@ -70,4 +70,10 @@ public abstract class Writing {
         this.attributes = attributes;
         this.length = length;
     }
+
+    public void reset(Writing writing) {
+        this.title = writing.title;
+        this.attributes = writing.attributes;
+        this.length = writing.length;
+    }
 }

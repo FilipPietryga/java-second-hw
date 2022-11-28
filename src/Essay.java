@@ -20,4 +20,18 @@ public class Essay extends Writing {
         sb.append("Topic: " + this.topic);
         return sb.toString();
     }
+
+    public void clear() {
+        title = "";
+        attributes = null;
+        length = 0;
+        topic = "";
+    }
+
+    public void reset(String title, Attributes attributes, int length, String topic) {
+        this.title = title;
+        this.attributes = attributes;
+        this.length = length;
+        this.topic = topic;
+    }
 }

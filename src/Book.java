@@ -18,4 +18,18 @@ public class Book extends Writing {
         sb.append("\nPlot: " + plot);
         return sb.toString();
     }
+
+    public void clear() {
+        title = "";
+        attributes = null;
+        length = 0;
+        plot = "";
+    }
+
+    public void reset(String title, Attributes attributes, int length, String plot) {
+        this.title = title;
+        this.attributes = attributes;
+        this.length = length;
+        this.plot = plot;
+    }
 }

@@ -58,4 +58,16 @@ public abstract class Writing {
         sb.append("\nLength: " + length);
         return sb.toString();
     }
+
+    public void clear() {
+        title = "";
+        attributes = null;
+        length = 0;
+    }
+
+    public void reset(String title, Attributes attributes, int length) {
+        this.title = title;
+        this.attributes = attributes;
+        this.length = length;
+    }
 }

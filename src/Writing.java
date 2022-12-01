@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public abstract class Writing {
+public abstract class Writing implements Readable, Closeable, Copyable, Comparable, Openable {
 
     protected String title;
     protected Attributes attributes;
@@ -75,5 +75,25 @@ public abstract class Writing {
         this.title = writing.title;
         this.attributes = writing.attributes;
         this.length = writing.length;
+    }
+
+    public void read() {
+        System.out.println("Read the book");
+    }
+
+    public void close() {
+        System.out.println("Close the book");
+    }
+
+    public void compare() {
+        System.out.println("Compare the book");
+    }
+
+    public void copy() {
+        System.out.println("Copy the book");
+    }
+
+    public void open() {
+        System.out.println("Open the book");
     }
 }

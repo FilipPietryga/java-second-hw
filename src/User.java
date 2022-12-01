@@ -1,4 +1,4 @@
-public class User extends Person {
+public final class User extends Person {
 
     protected Attributes preferences;
 

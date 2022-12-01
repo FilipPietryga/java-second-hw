@@ -1,4 +1,4 @@
-public class Essay extends Writing {
+public final class Essay extends Writing {
     protected String topic;
 
     public String getTopic() {

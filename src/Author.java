@@ -1,6 +1,6 @@
 import java.util.Objects;
 
-public class Author extends Person {
+public final class Author extends Person {
 
     public Author(String name, String surname, String country) {
         super(name, surname, country);

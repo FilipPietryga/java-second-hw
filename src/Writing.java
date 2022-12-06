@@ -1,5 +1,3 @@
-import java.util.Objects;
-
 public abstract class Writing implements Readable, Closeable, Copyable, Comparable, Openable {
 
     protected String title;
@@ -20,6 +18,10 @@ public abstract class Writing implements Readable, Closeable, Copyable, Comparab
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public Writing() {
+        this("", null);
     }
 
     public Writing(String title, Attributes attributes) {

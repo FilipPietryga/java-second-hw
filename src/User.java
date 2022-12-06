@@ -1,13 +1,24 @@
+import java.util.prefs.Preferences;
+
 public final class User extends Person {
 
-    protected Attributes preferences;
+    protected final Attributes preferences;
 
     public Attributes getPreferences() {
         return preferences;
     }
 
-    public void setPreferences(Attributes preferences) {
-        this.preferences = preferences;
+    // would make compiler errors
+//    public void setPreferences(Attributes preferences) {
+//        this.preferences = preferences;
+//    }
+
+    public User() {
+        this("", "", "", null);
+    }
+
+    public static User PersonToUser(Person person) {
+        return new User(person.name, person.surname, person.country, new Attributes());
     }
 
     public User(String name, String surname, String country, Attributes preferences) {

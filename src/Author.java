@@ -1,9 +1,15 @@
-import java.util.Objects;
-
 public final class Author extends Person {
+
+    public Author() {
+        this("", "", "");
+    }
 
     public Author(String name, String surname, String country) {
         super(name, surname, country);
+    }
+
+    public static Author PersonToAuthor(Person person) {
+        return new Author(person.name, person.surname, person.country);
     }
 
     @Override

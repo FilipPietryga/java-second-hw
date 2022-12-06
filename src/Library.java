@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.List;
 
 public class Library {
-    private final List<Writing> writings = new LinkedList<Writing>();
+    private List<Writing> writings = new LinkedList<Writing>();
 
     public void addWriting(Writing writing) {
         if(writing == null) return;
@@ -10,8 +10,13 @@ public class Library {
     }
 
     public Library() {
-        List<Writing> writings = new LinkedList<Writing>();
+        this.writings = new LinkedList<Writing>();
     }
+
+    public Library(LinkedList<Writing> writings) {
+        this.writings = writings;
+    }
+
 
     public int hashCode() {
         int result = (int) (writings.hashCode() ^ (writings.hashCode() >>> 32));
@@ -23,11 +28,12 @@ public class Library {
         return new StringBuilder("I am a library!").toString();
     }
 
-    public void findFor(User user) {
+    public void findFor(User user) throws NoBookFoundException {
         for (Writing writing: writings) {
             if(writing.equals(user)) {
                 System.out.println(writing);
             }
         }
+        throw new NoBookFoundException("No book matched for user: " +  user);
     }
 }

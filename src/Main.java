@@ -1,5 +1,11 @@
+import org.apache.log4j.Logger;
+
 public class Main {
+    private static Logger logger = Logger.getLogger(Main.class);
     public static void main(String[] args) {
+
+        logger.info("Hello world!");
+
         Library library = new Library();
         System.out.println(library.toString());
 
@@ -38,6 +44,10 @@ public class Main {
                 new Genre("Poststructuralism", "", ""),
                 new Author("Gilles", "Deleuze", "France")));
 
-        library.findFor(user);
+        try {
+            library.findFor(user);
+        } catch (NoBookFoundException ex) {
+            System.out.println(ex.getMessage());
+        }
     }
 }

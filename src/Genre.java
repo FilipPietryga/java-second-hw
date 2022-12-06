@@ -29,6 +29,10 @@ public class Genre {
         this.history = history;
     }
 
+    public Genre() {
+        this("", "", "");
+    }
+
     public Genre(String name, String description, String history) {
         this.name = name;
         this.description = description;

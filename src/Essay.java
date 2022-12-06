@@ -9,6 +9,14 @@ public final class Essay extends Writing {
         this.topic = topic;
     }
 
+    public Essay() {
+        this("", null, "");
+    }
+
+    public static Essay WritingToEssay(Writing writing) {
+        return new Essay(writing.title, new Attributes(), "Topic");
+    }
+
     public Essay(String title, Attributes attributes, String topic) {
         super(title, attributes);
     }

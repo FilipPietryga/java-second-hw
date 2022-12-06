@@ -4,9 +4,18 @@ import javax.management.Attribute;
 
 public class Book extends Writing {
     protected String plot;
+
+    public Book() {
+        this("", null, "");
+    }
+
     public Book(String title, Attributes attributes, String plot) {
         super(title, attributes);
         this.plot = plot;
+    }
+
+    public static Book WritingToBook(Writing writing) {
+        return new Book(writing.title, new Attributes(), "Topic");
     }
 
     @Override

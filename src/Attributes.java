@@ -1,7 +1,3 @@
-import org.w3c.dom.Attr;
-
-import java.util.Objects;
-
 public class Attributes {
     protected Genre genre;
     protected Author author;
@@ -20,6 +16,10 @@ public class Attributes {
 
     public void setAuthor(Author author) {
         this.author = author;
+    }
+
+    public Attributes() {
+        this(new Genre(), new Author());
     }
 
     public Attributes(Genre genre, Author author) {

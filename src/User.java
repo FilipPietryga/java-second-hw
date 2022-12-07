@@ -35,9 +35,9 @@ public final class User extends Person {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("\n");
-        sb.append("\nPreferences: " + preferences);
-        sb.append("\nName: " + name);
-        sb.append("\nLength: " + country);
+        sb.append("\nUser Preferences: " + preferences);
+        sb.append("\n\nUser Data: \n\nName: " + name);
+        sb.append("\nCountry: " + country);
         return sb.toString();
     }
 }

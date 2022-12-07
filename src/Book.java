@@ -20,7 +20,7 @@ public class Book extends Writing {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("\n");
+        StringBuilder sb = new StringBuilder("");
         sb.append("\nTitle: " + title);
         sb.append("\nAttributes: " + attributes);
         sb.append("\nLength: " + length);

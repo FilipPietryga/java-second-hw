@@ -30,10 +30,10 @@ public final class Author extends Person {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("");
+        StringBuilder sb = new StringBuilder("\n");
         sb.append("Name: " + name);
-        sb.append("Surname: " + surname);
-        sb.append("Country: " + country);
+        sb.append(", Surname: " + surname);
+        sb.append(", Country: " + country);
         return sb.toString();
     }
 }

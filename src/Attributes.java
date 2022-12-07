@@ -45,9 +45,9 @@ public class Attributes {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder("\n");
-        sb.append("Author: \n");
+        sb.append("\nAuthor: ");
         sb.append(author);
-        sb.append("Genre: \n");
+        sb.append("\nGenre: ");
         sb.append(genre);
         return sb.toString();
     }

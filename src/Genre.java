@@ -57,9 +57,9 @@ public class Genre {
 
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder("genre's name: " + this.name);
-        sb.append("\ngenre's surname: " + this.description);
-        sb.append("\ngenre's country: " + this.history);
+        StringBuilder sb = new StringBuilder("\nname: " + this.name);
+        sb.append("\ndescription: " + this.description);
+        sb.append("\nhistory: " + this.history);
         return sb.toString();
     }
 }

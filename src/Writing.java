@@ -29,9 +29,12 @@ public abstract class Writing implements Readable, Closeable, Copyable, Comparab
         this.attributes = attributes;
     }
 
-    public boolean equals(User o) {
+    public boolean equals(User o) throws EmptyPreferencesException {
         if (o == null) return false;
         User user = (User) o;
+        if(user.preferences.author.equals(null) || user.preferences.getGenre().equals(null)) {
+            throw new EmptyPreferencesException("No user preferences have been specified");
+        }
         return attributes.equals(user.getPreferences());
     }
 

@@ -71,8 +71,8 @@ public class Library {
         File f = new File("save.txt");
         StringBuilder fullString = new StringBuilder("");
         for(Writing item : writings) {
-
-            if(item.getClass().getSimpleName().equals("Items.Book")) {
+            System.out.println(item.getClass().getSimpleName());
+            if(item.getClass().getSimpleName().equals("Book")) {
                 Book book = (Book) item;
 
                 StringBuilder sb = new StringBuilder("");
@@ -82,9 +82,9 @@ public class Library {
                 sb.append(book.getFeatures().getAuthor().getSurname() + " ");
                 sb.append(book.getPlot());
 
-                fullString.append("Essay " + sb + "\n");
+                fullString.append("Book " + sb + "\n");
 
-            } else if(item.getClass().getSimpleName().equals("Items.Essay")) {
+            } else if(item.getClass().getSimpleName().equals("Essay")) {
                 Essay essay = (Essay) item;
 
                 StringBuilder sb = new StringBuilder("");
@@ -94,7 +94,7 @@ public class Library {
                 sb.append(essay.getFeatures().getAuthor().getSurname() + " ");
                 sb.append(essay.getTopic());
 
-                fullString.append("Book " + sb + "\n");
+                fullString.append("Essay " + sb + "\n");
             }
         }
         try {
@@ -119,10 +119,10 @@ public class Library {
     public <T extends Writing> void addItem(T item) throws EmptyWritingInsertionException {
         if(item == null) return;
         if(item.getTitle().equals("")) {
-            if(item.getClass().getSimpleName().equals("Items.Book")) {
+            if(item.getClass().getSimpleName().equals("main.java.Items.Book")) {
                 Book book = (Book) item;
                 throw new EmptyBookInsertionException("You tried to insert an empty Items.Book", book.getTitle(), book.getPlot(), book.getFeatures());
-            } else if(item.getClass().getSimpleName().equals("Items.Essay")) {
+            } else if(item.getClass().getSimpleName().equals("main.java.Items.Essay")) {
                 Essay essay = (Essay) item;
                 throw new EmptyEssayInsertionException("You tried to insert an empty Items.Essay", essay.getTitle(), essay.getTopic(), essay.getFeatures());
             }
